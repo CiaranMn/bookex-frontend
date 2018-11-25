@@ -1,6 +1,6 @@
 # BookEx - Frontend
 
-Allows users to search books, add books to their favourites or wishlist, indicate which book they are currently reading, and offer up books for loan (and see which books other users are offering for loan).
+Allows users to search books, add books to their favourites or wishlist, indicate which book they are currently reading, and offer up books for loan (and see which books other users are offering for loan). Backend here: https://github.com/CiaranMn/bookex-backend
 
 ## How it works for users
 - On app load the home page displays a selection of books users have added to their favourites and wishlists, and on the right shows a leaderboard of books people are currently reading, and how many readers each has.

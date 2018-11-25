@@ -137,7 +137,7 @@ class App extends Component {
     if (foundLoan) {
       this.removeLoaned(foundLoan)
     } else {
-      API.loan(book, user._id) 
+      API.loan(book) 
         .then(resp => this.getLoanedBooks())
     }
   }

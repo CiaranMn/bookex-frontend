@@ -72,28 +72,30 @@ class API {
   }
 
   // LOAN ROUTES
-  static loan(book, id) {
+  static loan(book) {
+    const token = localStorage.getItem('authorization')
     return fetch(this.baseUrl + '/loans', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'authorization': token,
+      },
       body: JSON.stringify({
-        user: id,
-        book: book
+        book
       })
     }).then(resp => {
       return resp.json()
     }).catch(err => console.log('Error in loaning', err))
   }
 
-  static userLoans(id) {
-    return fetch(this.baseUrl + `/loans/${id}`)
-      .then(resp => resp.json())
-  }
-
   static deleteFromLoans(loanId) {
+    const token = localStorage.getItem('authorization')
     return fetch(this.baseUrl + `/loan/${loanId}`, {
-      method: 'DELETE'
-    })
+      method: 'DELETE',
+      headers: {
+        'authorization': token,
+      },
+    }).catch(err => console.log('Error in deleting loan', err))
   }
 
   static getAllLoanedBooks() {

@@ -9,6 +9,8 @@ Allows users to search books, add books to their favourites or wishlist, indicat
 - From the loan shelf page, users can see what books are available for loan, and click on any to see which user has it available.
 - From their profile page, users can view and remove books on their wishlist and favourite lists.
 
+<img src="demo.gif" width="500" height="auto">
+
 ## Frontend structure
 Written in React. `npm install && npm run start` to start the frontend in development mode. The backend is live on Heroku and the frontend will get data from and post data to that server unless told otherwise (in API.js). Backend code is here: https://github.com/CiaranMn/bookex-backend
 
